@@ -5,5 +5,4 @@ WORKDIR /app
 
 RUN uv sync --frozen
 
-# uvicorn を使用してアプリを起動
-CMD ["uv",  "run", "app/main:app"]
+CMD ["uv",  "run", "hypercorn", "app/main:app"]
